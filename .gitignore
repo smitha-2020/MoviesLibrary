@@ -1,3 +1,4 @@
 node_modules/
 config/
+data/
 package-lock.json
