@@ -5,16 +5,28 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "rm -rf ./dist && export moviesLibrary_privateKey=smitha@123 && export NODE_ENV=development &&  tsc && nodemon ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "config": "^4.3.0",
     "debug": "^4.4.3",
     "express": "^5.2.1",
+    "http-status-codes": "^2.3.0",
     "joi": "^18.0.2",
+    "jsonwebtoken": "^9.0.3",
+    "lodash": "^4.17.23",
     "mongoose": "^9.2.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/config": "^3.3.5",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/lodash": "^4.17.24",
+    "typescript": "^5.9.3"
   }
 }
